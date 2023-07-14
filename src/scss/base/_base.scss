@@ -1,1 +1,12 @@
 @use "../abstracts/" as *;
+
+body {
+  position: relative;
+  background: $clr-bg-dark url("../assets/images/mobile/image-host.jpg") center /
+    cover no-repeat;
+  background-blend-mode: multiply;
+  padding: {
+    block: 3.88rem;
+    inline: 1.5rem;
+  }
+}

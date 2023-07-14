@@ -1,4 +1,10 @@
 @use "../abstracts/" as *;
 
 .header {
+  display: flex;
+  justify-content: center;
+
+  @include mq(768px) {
+    justify-content: flex-start;
+  }
 }

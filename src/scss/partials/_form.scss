@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.form {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+
+  @include mq(475px) {
+    gap: 0.5rem;
+    grid-template-columns: 1fr auto;
+    background-color: $clr-bg-form;
+    border-radius: 100rem;
+    padding: 0.31rem;
+  }
+
+  &__input {
+    padding: 0.56rem 2rem;
+    background-color: $clr-bg-form;
+    border: none;
+    border-radius: 100rem;
+  }
+
+  &__error-message {
+    // visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    transform: translate(1.5rem, 1.75rem);
+  }
+}

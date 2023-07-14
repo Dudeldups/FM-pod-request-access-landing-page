@@ -1,4 +1,22 @@
 @use "../abstracts/" as *;
 
 .cta {
+  &__title {
+    margin-top: 3.5rem;
+  }
+
+  &__desc {
+    margin-top: get-clamp(1rem, 1.5rem, 23.4375rem, 48rem);
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  &__logo {
+    max-width: 3.5rem;
+  }
 }

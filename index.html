@@ -20,8 +20,57 @@
     <title>Frontend Mentor | Pod request access landing page</title>
   </head>
   <body>
-    Publish your podcasts everywhere. Upload your audio to Pod with a single
-    click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google
-    Podcasts, Pocket Casts and more! Request access
+    <header class="header">
+      <img src="src/assets/images/logos/logo.svg" alt="pod logo" />
+    </header>
+
+    <main class="cta">
+      <article class="cta__text">
+        <h1 class="cta__title">
+          Publish your podcasts <span class="text-white">everywhere.</span>
+        </h1>
+        <p class="cta__desc">
+          Upload your audio to Pod with a single click. We’ll then distribute
+          your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts
+          and more!
+        </p>
+      </article>
+
+      <div class="cta__logo-container">
+        <img
+          src="src/assets/images/logos/spotify.svg"
+          alt="Spotify logo"
+          class="cta__logo"
+        />
+        <img
+          src="src/assets/images/logos/apple-podcast.svg"
+          alt="Apple Podcasts logo"
+          class="cta__logo"
+        />
+        <img
+          src="src/assets/images/logos/google-podcasts.svg"
+          alt="Google Podcasts logo"
+          class="cta__logo"
+        />
+        <img
+          src="src/assets/images/logos/pocket-casts.svg"
+          alt="Pocket Casts logo"
+          class="cta__logo"
+        />
+      </div>
+
+      <form action="" class="form">
+        <label for="email" class="sr-only">Email address</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="Email address"
+          class="form__input"
+          autocomplete="email"
+        />
+        <p class="form__error-message" aria-live="polite">Oopsie doopsie!</p>
+        <button class="form__btn btn">Request Access</button>
+      </form>
+    </main>
   </body>
 </html>

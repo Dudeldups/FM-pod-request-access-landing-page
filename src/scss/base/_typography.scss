@@ -1,10 +1,59 @@
 @use "../abstracts/" as *;
 
 @font-face {
-  font-family: "Chivo light";
-  src: url("../assets/fonts/Chivo-Light.ttf");
+  font: {
+    family: "Chivo";
+    weight: 100 700;
+  }
+  src: url("../assets/fonts/Chivo-VariableFont_wght.ttf");
 }
 
 body {
-  font: 0.875rem / 1.75rem "Chivo light", sans-serif;
+  font: 100 0.875rem / 1.75rem "Chivo", sans-serif;
+}
+
+.text-white {
+  color: $clr-white;
+}
+
+.cta {
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: get-clamp(1.625rem, 3.25rem, 23.4375rem, 56.25rem);
+    line-height: get-clamp(2.375rem, 3.875rem, 23.4375rem, 56.25rem);
+    text-transform: uppercase;
+    color: $clr-main;
+  }
+
+  &__desc {
+    font-size: get-clamp(0.9375rem, 1.125rem, 23.4375rem, 56.25rem);
+    line-height: get-clamp(1.5625rem, 1.75rem, 23.4375rem, 56.25rem);
+    color: $clr-text-grey;
+  }
+}
+
+.form {
+  font-weight: 400;
+
+  &__input {
+    color: $clr-white;
+
+    &::placeholder {
+      color: $clr-text-grey;
+      opacity: 0.75;
+    }
+  }
+
+  &__error-message {
+    font-size: 0.75rem;
+    color: $clr-error;
+  }
+
+  &__btn {
+    font-weight: 700;
+    color: $clr-bg-dark;
+  }
 }

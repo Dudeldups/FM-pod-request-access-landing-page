@@ -1,4 +1,7 @@
 @use "../abstracts/" as *;
 
 .btn {
+  padding: 0.56rem 1.7rem;
+  background-color: $clr-main;
+  border-radius: 100rem;
 }
