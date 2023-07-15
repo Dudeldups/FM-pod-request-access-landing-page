@@ -4,9 +4,10 @@
   min-height: 100vh;
   min-height: 100dvh;
   position: relative;
+  padding-inline: get-clamp(1.5rem, 2.44rem, 23.4375rem, 30rem);
+  background: $clr-bg-dark;
   // background: $clr-bg-dark url("../assets/images/mobile/image-host.jpg") center top /
   //   cover no-repeat;
-  background: $clr-bg-dark;
 
   @include mq($until: $bp-tablet) {
     &::before {

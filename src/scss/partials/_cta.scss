@@ -1,14 +1,35 @@
 @use "../abstracts/" as *;
 
 .cta {
-  padding-inline: 1.5rem;
+  max-width: get-clamp(39.6875rem, 45.1875rem, 48rem, 58rem);
+
+  @include mq($bp-tablet) {
+    margin-top: 9.5rem;
+    background-color: $clr-bg-dark;
+    background-color: midnightblue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    @include mq($until: $bp-tablet) {
+      display: grid;
+      justify-items: center;
+    }
+  }
 
   &__title {
     margin-top: 3.5rem;
+    max-width: 25ch;
+
+    @include mq($bp-tablet) {
+      margin-top: 5.81rem;
+    }
   }
 
   &__desc {
     margin-top: get-clamp(1rem, 1.5rem, 23.4375rem, 48rem);
+    max-width: 40ch;
   }
 
   &__logo-container {
@@ -16,6 +37,13 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 2rem;
+
+    @include mq($bp-tablet) {
+      justify-content: flex-start;
+      gap: 2.5rem;
+      margin-top: 4rem;
+      order: 1;
+    }
   }
 
   &__logo {
