@@ -1,12 +1,21 @@
 @use "../abstracts/" as *;
 
-body {
+.background {
+  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
-  background: $clr-bg-dark url("../assets/images/mobile/image-host.jpg") center /
-    cover no-repeat;
-  background-blend-mode: multiply;
-  padding: {
-    block: 3.88rem;
-    inline: 1.5rem;
+  // background: $clr-bg-dark url("../assets/images/mobile/image-host.jpg") center top /
+  //   cover no-repeat;
+  background: $clr-bg-dark;
+
+  @include mq($until: $bp-tablet) {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 0;
+      background: $clr-bg-dark url("../assets/images/mobile/image-host.jpg")
+        center top / cover no-repeat;
+      opacity: 0.075;
+    }
   }
 }

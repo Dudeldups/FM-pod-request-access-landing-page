@@ -1,6 +1,8 @@
 @use "../abstracts/" as *;
 
 .cta {
+  padding-inline: 1.5rem;
+
   &__title {
     margin-top: 3.5rem;
   }
@@ -17,6 +19,6 @@
   }
 
   &__logo {
-    max-width: 3.5rem;
+    max-width: get-clamp(3.5rem, 6rem, 20rem, 32.5rem);
   }
 }
