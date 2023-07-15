@@ -289,7 +289,11 @@ body {
 }
 @media (max-width: 37.49em) {
   .cta__logo {
-    max-width: 3.5rem;
+    max-width: clamp(
+    3rem,
+    20vw + -1rem,
+    6rem
+  );
   }
 }
 
@@ -338,9 +342,10 @@ body {
 
 .btn {
   padding: 0.56rem 1.7rem;
-  background-color: #54e6af;
+  background: #54e6af;
   border-radius: 100rem;
+  transition: background 0.25s ease-in;
 }
 .btn:hover, .btn:focus {
-  background-color: #adf3d9;
+  background: #adf3d9;
 }/*# sourceMappingURL=main.css.map */

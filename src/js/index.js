@@ -1,7 +1,6 @@
 const formEl = document.querySelector(".form");
 const inputEl = document.querySelector(".form__input");
 const errorEl = document.querySelector(".form__error-message");
-// const buttonEl = document.querySelector(".form__btn");
 
 const isValidEmail = email => {
   const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;

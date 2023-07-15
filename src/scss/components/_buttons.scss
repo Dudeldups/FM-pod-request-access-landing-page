@@ -2,11 +2,12 @@
 
 .btn {
   padding: 0.56rem 1.7rem;
-  background-color: $clr-main;
+  background: $clr-main;
   border-radius: 100rem;
+  transition: background 0.25s ease-in;
 
   &:hover,
   &:focus {
-    background-color: lighten($clr-main, 20);
+    background: lighten($clr-main, 20);
   }
 }

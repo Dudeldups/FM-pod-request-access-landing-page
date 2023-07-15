@@ -48,7 +48,7 @@
 
   &__logo {
     @include mq($until: $bp-tablet) {
-      max-width: 3.5rem;
+      max-width: get-clamp(3rem, 6rem, 20rem, 35rem);
     }
   }
 }
