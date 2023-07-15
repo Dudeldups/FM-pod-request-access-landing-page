@@ -1,13 +1,28 @@
 @use "../abstracts/" as *;
 
+body {
+  background-color: $clr-bg-dark;
+  display: grid;
+
+  @include mq($from: $bp-tablet, $until: $bp-desktop) {
+    padding-bottom: 10rem;
+    background: $clr-bg-dark url("../assets/images/bg-pattern-dots.svg") bottom
+      left 1.88rem no-repeat;
+  }
+
+  @include mq($bp-desktop) {
+    place-content: center;
+  }
+}
+
 .background {
-  min-height: 100vh;
-  min-height: 100dvh;
   position: relative;
   padding-inline: get-clamp(1.5rem, 2.44rem, 23.4375rem, 30rem);
-  background-color: $clr-bg-dark;
 
   @include mq($until: $bp-tablet) {
+    min-height: 100vh;
+    min-height: 100dvh;
+
     &::before {
       content: "";
       position: absolute;
@@ -19,12 +34,32 @@
   }
 
   @include mq($bp-tablet) {
-    background: {
-      image: url("../assets/images/tablet/image-host.jpg"),
-        url("../assets/images/bg-pattern-dots.svg");
-      position: top right, bottom left 1.88rem;
-      size: 30.6875rem, auto;
-      repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    max-height: 47.9375rem;
+    background: url("../assets/images/tablet/image-host.jpg") top right /
+      30.6875rem no-repeat;
+  }
+
+  @include mq($bp-desktop) {
+    background: url("../assets/images/desktop/image-host.jpg") center right /
+      55.5rem no-repeat;
+
+    min-width: min(97rem, 100vw);
+    overflow-y: visible;
+    overflow-x: clip;
+    max-height: 40rem;
+    margin-block: 3rem;
+    padding-left: get-clamp(2.44rem, 10.31rem, 75rem, 87.5rem);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0 0 -3.25rem 0;
+      background: url("../assets/images/bg-pattern-dots.svg") bottom right
+        no-repeat;
     }
   }
 }

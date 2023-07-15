@@ -5,10 +5,10 @@
 
   @include mq($bp-tablet) {
     min-height: 31.8125rem;
-    margin-top: 9.5rem;
     background-color: $clr-bg-dark;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
   }
 
   &__text {
@@ -23,7 +23,7 @@
     max-width: 25ch;
 
     @include mq($bp-tablet) {
-      margin-top: 5.81rem;
+      margin-top: 0;
     }
   }
 
@@ -40,7 +40,7 @@
 
     @include mq($bp-tablet) {
       justify-content: flex-start;
-      gap: get-clamp(1.5rem, 2.5rem, 37.5rem, 48rem);
+      gap: get-clamp(1.5rem, 2.5rem, 37.5rem, 42rem);
       margin-top: 4rem;
       order: 1;
     }

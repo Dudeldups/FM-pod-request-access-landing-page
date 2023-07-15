@@ -137,18 +137,35 @@ body {
   color: #121725;
 }
 
+body {
+  background-color: #121725;
+  display: grid;
+}
+@media (min-width: 37.5em) and (max-width: 74.99em) {
+  body {
+    padding-bottom: 10rem;
+    background: #121725 url("../assets/images/bg-pattern-dots.svg") bottom left 1.88rem no-repeat;
+  }
+}
+@media (min-width: 75em) {
+  body {
+    place-content: center;
+  }
+}
+
 .background {
-  min-height: 100vh;
-  min-height: 100dvh;
   position: relative;
   padding-inline: clamp(
     1.5rem,
     14.32vw + -1.86rem,
     2.44rem
   );
-  background-color: #121725;
 }
 @media (max-width: 37.49em) {
+  .background {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
   .background::before {
     content: "";
     position: absolute;
@@ -159,10 +176,33 @@ body {
 }
 @media (min-width: 37.5em) {
   .background {
-    background-image: url("../assets/images/tablet/image-host.jpg"), url("../assets/images/bg-pattern-dots.svg");
-    background-position: top right, bottom left 1.88rem;
-    background-size: 30.6875rem, auto;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    max-height: 47.9375rem;
+    background: url("../assets/images/tablet/image-host.jpg") top right/30.6875rem no-repeat;
+  }
+}
+@media (min-width: 75em) {
+  .background {
+    background: url("../assets/images/desktop/image-host.jpg") center right/55.5rem no-repeat;
+    min-width: min(97rem, 100vw);
+    overflow-y: visible;
+    overflow-x: clip;
+    max-height: 40rem;
+    margin-block: 3rem;
+    padding-left: clamp(
+    2.44rem,
+    62.96vw + -44.78rem,
+    10.31rem
+  );
+  }
+  .background::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 -3.25rem 0;
+    background: url("../assets/images/bg-pattern-dots.svg") bottom right no-repeat;
   }
 }
 
@@ -174,7 +214,13 @@ body {
 @media (min-width: 37.5em) {
   .header {
     justify-content: flex-start;
-    padding-top: 3.12rem;
+    padding-top: 3.125rem;
+  }
+}
+@media (min-width: 75em) {
+  .header {
+    padding-top: 0;
+    transform: translateY(-50%);
   }
 }
 
@@ -188,10 +234,10 @@ body {
 @media (min-width: 37.5em) {
   .cta {
     min-height: 31.8125rem;
-    margin-top: 9.5rem;
     background-color: #121725;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
   }
 }
 @media (max-width: 37.49em) {
@@ -206,7 +252,7 @@ body {
 }
 @media (min-width: 37.5em) {
   .cta__title {
-    margin-top: 5.81rem;
+    margin-top: 0;
   }
 }
 .cta__desc {
@@ -228,7 +274,7 @@ body {
     justify-content: flex-start;
     gap: clamp(
     1.5rem,
-    9.52vw + -2.07rem,
+    22.22vw + -6.83rem,
     2.5rem
   );
     margin-top: 4rem;

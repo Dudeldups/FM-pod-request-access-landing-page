@@ -7,6 +7,11 @@
 
   @include mq($bp-tablet) {
     justify-content: flex-start;
-    padding-top: 3.12rem;
+    padding-top: 3.125rem;
+  }
+
+  @include mq($bp-desktop) {
+    padding-top: 0;
+    transform: translateY(-50%);
   }
 }
