@@ -52,8 +52,15 @@ body {
   }
 
   &__error-message {
-    font-size: 0.75rem;
-    color: $clr-error;
+    font-size: 0.8rem;
+
+    [data-validation="invalid"] & {
+      color: $clr-error;
+    }
+
+    [data-validation="valid"] & {
+      color: $clr-main;
+    }
   }
 
   &__btn {

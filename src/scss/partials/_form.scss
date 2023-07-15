@@ -24,12 +24,26 @@
     background-color: $clr-bg-form;
     border: none;
     border-radius: 100rem;
+
+    [data-validation="invalid"] & {
+      outline: 0.2em dashed $clr-error;
+    }
+
+    &:focus,
+    [data-validation="valid"] & {
+      outline: 0.2em solid $clr-main;
+    }
   }
 
   &__error-message {
-    // visibility: hidden;
+    visibility: hidden;
     position: absolute;
     bottom: 0;
     transform: translate(2.31rem, 1.85rem);
+
+    [data-validation="invalid"] &,
+    [data-validation="valid"] & {
+      visibility: visible;
+    }
   }
 }

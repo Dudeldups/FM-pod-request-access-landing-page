@@ -22,7 +22,9 @@
   <body>
     <div class="background">
       <header class="header">
-        <img src="src/assets/images/logos/logo.svg" alt="pod logo" />
+        <a href="#"
+          ><img src="src/assets/images/logos/logo.svg" alt="pod logo"
+        /></a>
       </header>
 
       <main class="cta">
@@ -61,7 +63,7 @@
           />
         </section>
 
-        <form action="#" class="form">
+        <form action="#" class="form" data-validation="">
           <label for="email" class="sr-only">Email address</label>
           <input
             type="text"
@@ -70,7 +72,7 @@
             class="form__input"
             autocomplete="email"
           />
-          <p class="form__error-message" aria-live="polite">Oopsie doopsie!</p>
+          <p class="form__error-message" aria-live="polite"></p>
           <button class="form__btn btn">Request Access</button>
         </form>
       </main>

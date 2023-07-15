@@ -39,25 +39,25 @@ body {
     justify-content: space-between;
     gap: 3rem;
     max-height: 47.9375rem;
-    background: url("../assets/images/tablet/image-host.jpg") top right /
-      30.6875rem no-repeat;
+    background: url("../assets/images/tablet/image-host.jpg") top right
+      get-clamp(-5rem, 0rem, 37.5rem, 43.75rem) / 30.6875rem no-repeat;
   }
 
   @include mq($bp-desktop) {
-    background: url("../assets/images/desktop/image-host.jpg") center right /
-      55.5rem no-repeat;
-
-    min-width: min(97rem, 100vw);
-    overflow-y: visible;
+    z-index: 10;
+    min-width: min(95rem, 100vw);
     overflow-x: clip;
-    max-height: 40rem;
-    margin-block: 3rem;
-    padding-left: get-clamp(2.44rem, 10.31rem, 75rem, 87.5rem);
+    min-height: 40rem;
+    margin-block: 4rem;
+    padding-left: get-clamp(2.44rem, 10.31rem, 62.5rem, 90rem);
+    background: url("../assets/images/desktop/image-host.jpg") center right
+      get-clamp(-16rem, 0rem, 62.5rem, 87.5rem) / 55.5rem no-repeat;
 
     &::after {
       content: "";
       position: absolute;
       inset: 0 0 -3.25rem 0;
+      z-index: -1;
       background: url("../assets/images/bg-pattern-dots.svg") bottom right
         no-repeat;
     }

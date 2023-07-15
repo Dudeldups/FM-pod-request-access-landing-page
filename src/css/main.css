@@ -129,8 +129,13 @@ body {
   opacity: 0.75;
 }
 .form__error-message {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+}
+[data-validation=invalid] .form__error-message {
   color: #fb3e3e;
+}
+[data-validation=valid] .form__error-message {
+  color: #54e6af;
 }
 .form__btn {
   font-weight: 700;
@@ -141,13 +146,13 @@ body {
   background-color: #121725;
   display: grid;
 }
-@media (min-width: 37.5em) and (max-width: 74.99em) {
+@media (min-width: 37.5em) and (max-width: 62.49em) {
   body {
     padding-bottom: 10rem;
     background: #121725 url("../assets/images/bg-pattern-dots.svg") bottom left 1.88rem no-repeat;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 62.5em) {
   body {
     place-content: center;
   }
@@ -181,27 +186,28 @@ body {
     justify-content: space-between;
     gap: 3rem;
     max-height: 47.9375rem;
-    background: url("../assets/images/tablet/image-host.jpg") top right/30.6875rem no-repeat;
+    background: url("../assets/images/tablet/image-host.jpg") top right clamp( -5rem, 80vw + -35rem, 0rem )/30.6875rem no-repeat;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 62.5em) {
   .background {
-    background: url("../assets/images/desktop/image-host.jpg") center right/55.5rem no-repeat;
-    min-width: min(97rem, 100vw);
-    overflow-y: visible;
+    z-index: 10;
+    min-width: min(95rem, 100vw);
     overflow-x: clip;
-    max-height: 40rem;
-    margin-block: 3rem;
+    min-height: 40rem;
+    margin-block: 4rem;
     padding-left: clamp(
     2.44rem,
-    62.96vw + -44.78rem,
+    28.62vw + -15.45rem,
     10.31rem
   );
+    background: url("../assets/images/desktop/image-host.jpg") center right clamp( -16rem, 64vw + -56rem, 0rem )/55.5rem no-repeat;
   }
   .background::after {
     content: "";
     position: absolute;
     inset: 0 0 -3.25rem 0;
+    z-index: -1;
     background: url("../assets/images/bg-pattern-dots.svg") bottom right no-repeat;
   }
 }
@@ -217,7 +223,7 @@ body {
     padding-top: 3.125rem;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 62.5em) {
   .header {
     padding-top: 0;
     transform: translateY(-50%);
@@ -314,10 +320,20 @@ body {
   border: none;
   border-radius: 100rem;
 }
+[data-validation=invalid] .form__input {
+  outline: 0.2em dashed #fb3e3e;
+}
+.form__input:focus, [data-validation=valid] .form__input {
+  outline: 0.2em solid #54e6af;
+}
 .form__error-message {
+  visibility: hidden;
   position: absolute;
   bottom: 0;
   transform: translate(2.31rem, 1.85rem);
+}
+[data-validation=invalid] .form__error-message, [data-validation=valid] .form__error-message {
+  visibility: visible;
 }
 
 .btn {
