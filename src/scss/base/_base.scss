@@ -5,18 +5,26 @@
   min-height: 100dvh;
   position: relative;
   padding-inline: get-clamp(1.5rem, 2.44rem, 23.4375rem, 30rem);
-  background: $clr-bg-dark;
-  // background: $clr-bg-dark url("../assets/images/mobile/image-host.jpg") center top /
-  //   cover no-repeat;
+  background-color: $clr-bg-dark;
 
   @include mq($until: $bp-tablet) {
     &::before {
       content: "";
       position: absolute;
       inset: 0 0 0 0;
-      background: $clr-bg-dark url("../assets/images/mobile/image-host.jpg")
-        center top / cover no-repeat;
+      background: url("../assets/images/mobile/image-host.jpg") center top /
+        cover no-repeat;
       opacity: 0.075;
+    }
+  }
+
+  @include mq($bp-tablet) {
+    background: {
+      image: url("../assets/images/tablet/image-host.jpg"),
+        url("../assets/images/bg-pattern-dots.svg");
+      position: top right, bottom left 1.88rem;
+      size: 30.6875rem, auto;
+      repeat: no-repeat;
     }
   }
 }

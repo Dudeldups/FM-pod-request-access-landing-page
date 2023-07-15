@@ -6,7 +6,7 @@
   gap: 1rem;
   margin-top: 3rem;
 
-  @include mq(475px) {
+  @include mq(500px) {
     gap: 0.5rem;
     grid-template-columns: 1fr auto;
     background-color: $clr-bg-form;
