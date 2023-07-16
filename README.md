@@ -19,7 +19,7 @@ This is a solution to the [Pod request access landing page challenge on Frontend
 
 ### Links
 
-- [Solution on Frontend Mentor]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/scss-pod-landing-page-aQ2Y7bG3zr)
 - [Live site](https://dudeldups.github.io/FM-pod-request-access-landing-page/)
 
 ## My process

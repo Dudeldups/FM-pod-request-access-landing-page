@@ -11,7 +11,7 @@ body {
   }
 
   @include mq($bp-desktop) {
-    place-content: center;
+    align-items: center;
   }
 }
 
@@ -20,8 +20,7 @@ body {
   padding-inline: get-clamp(1.5rem, 2.44rem, 23.4375rem, 30rem);
 
   @include mq($until: $bp-tablet) {
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100%;
 
     &::before {
       content: "";
@@ -45,8 +44,8 @@ body {
 
   @include mq($bp-desktop) {
     z-index: 10;
-    min-width: min(95rem, 100vw);
-    overflow-x: clip;
+    min-width: min(95rem, 100%);
+    margin-inline: auto;
     min-height: 40rem;
     margin-block: 4rem;
     padding-left: get-clamp(2.44rem, 10.31rem, 62.5rem, 90rem);

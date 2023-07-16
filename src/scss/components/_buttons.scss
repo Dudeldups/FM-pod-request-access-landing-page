@@ -1,7 +1,8 @@
 @use "../abstracts/" as *;
 
 .btn {
-  padding: 0.56rem 1.7rem;
+  width: 100%;
+  padding-block: 0.56rem;
   background: $clr-main;
   border-radius: 100rem;
   transition: background 0.25s ease-in;

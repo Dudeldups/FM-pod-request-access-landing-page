@@ -154,7 +154,7 @@ body {
 }
 @media (min-width: 62.5em) {
   body {
-    place-content: center;
+    align-items: center;
   }
 }
 
@@ -168,8 +168,7 @@ body {
 }
 @media (max-width: 37.49em) {
   .background {
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 100%;
   }
   .background::before {
     content: "";
@@ -192,8 +191,8 @@ body {
 @media (min-width: 62.5em) {
   .background {
     z-index: 10;
-    min-width: min(95rem, 100vw);
-    overflow-x: clip;
+    min-width: min(95rem, 100%);
+    margin-inline: auto;
     min-height: 40rem;
     margin-block: 4rem;
     padding-left: clamp(
@@ -306,7 +305,7 @@ body {
 @media (min-width: 31.25em) {
   .form {
     gap: 0.5rem;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 10.125rem;
     background-color: #2c344b;
     border-radius: 100rem;
     padding: 0.31rem;
@@ -341,7 +340,8 @@ body {
 }
 
 .btn {
-  padding: 0.56rem 1.7rem;
+  width: 100%;
+  padding-block: 0.56rem;
   background: #54e6af;
   border-radius: 100rem;
   transition: background 0.25s ease-in;

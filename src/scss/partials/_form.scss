@@ -8,7 +8,7 @@
 
   @include mq(500px) {
     gap: 0.5rem;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 10.125rem;
     background-color: $clr-bg-form;
     border-radius: 100rem;
     padding: 0.31rem;
